@@ -1,0 +1,18 @@
+<pre>
+<?php
+$con=mysqli_connect("localhost","root","");
+if($con)
+echo "!";
+$query="SELECT * FROM produce1.produce";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+    echo "<tr>";
+    echo "<td>".$row['id'] . "</td>";
+    echo "<td>".$row['name']."</td>";
+    echo "<td>".$row['num']."</td>";
+    echo "</tr>";
+}
+mysqli_close($con);
+ ?>
+</pre>
